@@ -5,7 +5,7 @@
       </a>
     </div>
   <nav>
-      {% assign pages = site.pages %}
+      {% assign pages = (site.pages | sort: 'order') %}
       {% for page in pages %}
         {% if page.nav_header == true %}
             <a href="{{ page.url | relative_url }}" class="pages_links">
